@@ -1,5 +1,7 @@
 # Chicken Tinder Setup
 
+[Miro Board](https://miro.com/app/board/uXjVJTvF80o=/)
+
 ## Backend
 - ASP.NET backend with SignalR for websocket live communication with clients
 - Launch in VS and run
