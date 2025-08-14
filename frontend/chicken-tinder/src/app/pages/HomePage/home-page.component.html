@@ -1,0 +1,45 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh;">
+    <div id="title" style="margin-bottom: 32px;">
+        <span style="font-size: 2rem; font-weight: bold;">Chicken Tinder</span>
+    </div>
+
+    <button id="start-button" style="width: 100%; padding: 10px; max-width: 320px; margin-bottom: 24px;" (click)="startSession()">
+        Start Session
+    </button>
+
+    <div style="display: flex; align-items: center; width: 100%; max-width: 320px; margin: 16px 0;">
+        <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 10px;">
+        <span style="white-space: nowrap;">or</span>
+        <hr style="flex: 1; border: none; border-top: 1px solid #ccc; margin: 0 10px;">
+    </div>
+
+    <form class="d-flex flex-column" style="width: 100%; max-width: 320px; gap: 12px; align-items: stretch; justify-content: center;" autocomplete="off" (submit)="$event.preventDefault()">
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <input
+                placeholder="Name"
+                [(ngModel)]="joiningName"
+                name="joiningName"
+                style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc;"
+            />
+        </div>
+        <div style="width: 100%; margin-top: 10px; display: flex; justify-content: center; align-items: center;">
+            <input
+                placeholder="Room Code"
+                [(ngModel)]="roomCode"
+                name="roomCode"
+                maxlength="4"
+                style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc;"
+            />
+        </div>
+        <div style="width: 100%; margin-top: 20px; display: flex; justify-content: center; align-items: center;">
+            <button
+                type="button"
+                (click)="attemptJoinSession(joiningName, roomCode)"
+                [disabled]="disableJoinButton()"
+                style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 4px;"
+            >
+                Join Session
+            </button>
+        </div>
+    </form>
+</div>

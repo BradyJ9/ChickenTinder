@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChickenTinder", "ChickenTinder\ChickenTinder.csproj", "{ABA3E62B-CAE0-41ED-9BE9-057C4D6C0548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChickenTinder.Logic", "ChickenTinder.Logic\ChickenTinder.Logic.csproj", "{298E5619-9578-439F-9DF6-F2FD0BA33CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR", "SignalR\SignalR.csproj", "{EAEF78F3-167C-469B-BB6C-2C6733BFA95E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABA3E62B-CAE0-41ED-9BE9-057C4D6C0548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA3E62B-CAE0-41ED-9BE9-057C4D6C0548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA3E62B-CAE0-41ED-9BE9-057C4D6C0548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA3E62B-CAE0-41ED-9BE9-057C4D6C0548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298E5619-9578-439F-9DF6-F2FD0BA33CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298E5619-9578-439F-9DF6-F2FD0BA33CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298E5619-9578-439F-9DF6-F2FD0BA33CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298E5619-9578-439F-9DF6-F2FD0BA33CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAEF78F3-167C-469B-BB6C-2C6733BFA95E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEF78F3-167C-469B-BB6C-2C6733BFA95E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEF78F3-167C-469B-BB6C-2C6733BFA95E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEF78F3-167C-469B-BB6C-2C6733BFA95E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

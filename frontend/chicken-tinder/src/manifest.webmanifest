@@ -1,0 +1,8 @@
+{
+  "name": "Chicken Tinder",
+  "short_name": "ChickenTinder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2"
+}

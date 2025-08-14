@@ -1,0 +1,159 @@
+<div class="container">
+    <div class="top-bar">
+        <button class="back-btn" (click)="backToHomePage()">
+            &#8592;
+        </button>
+    </div>
+    <div class="section room-code">
+        <div class="label">Room Code</div>
+        <div class="code" *ngIf="roomCode">{{ roomCode }}</div>
+        <div class="error" *ngIf="!roomCode">ERROR</div>
+    </div>
+
+    <div class="section options">
+        <div class="option-row">
+            <input type="number" min="1" class="radius-input" [(ngModel)]="mileRadius">
+            <span class="option-label">mile radius</span>
+        </div>
+        <div class="option-row">
+            <input type="checkbox" id="fastFoodCheckbox" [(ngModel)]="fastFood">
+            <label for="fastFoodCheckbox" class="checkbox-label">Fast Food</label>
+        </div>
+        <div class="option-row">
+            <input type="checkbox" id="sitDownCheckbox" [(ngModel)]="sitDown">
+            <label for="sitDownCheckbox" class="checkbox-label">Sit Down</label>
+        </div>
+    </div>
+
+    <div class="section players" *ngIf="waitingPlayers.length > 0">
+        <ul class="players-list">
+            <li *ngFor="let player of waitingPlayers">{{ player }} is waiting...</li>
+        </ul>
+    </div>
+    <div class="section no-players" *ngIf="waitingPlayers.length === 0">
+        <span>Waiting for players to join...</span>
+    </div>
+
+    <div class="section begin-btn">
+        <button [disabled]="shouldDisableBegin()">BEGIN</button>
+    </div>
+</div>
+
+<style>
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 8px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #fbfbfb;
+    padding: 8px 12px;
+    pointer-events: auto;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+.back-btn:active {
+    background: #eee;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 16px 2px;
+        max-width: 98vw;
+    }
+    .section {
+        margin-bottom: 16px;
+    }
+    .begin-btn button {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    .back-btn {
+        font-size: 1.5em;
+        padding: 6px 10px;
+    }
+}
+.section {
+    width: 100%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.room-code .label {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+.room-code .code {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.room-code .error {
+    color: #d32f2f;
+    font-weight: 500;
+}
+.options .option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.radius-input {
+    width: 60px;
+    margin-right: 8px;
+    padding: 4px;
+    font-size: 1em;
+}
+.option-label, .checkbox-label {
+    font-size: 1em;
+}
+.players-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.players-list li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1em;
+    text-align: center;
+}
+.begin-btn button {
+    width: 100%;
+    max-width: 200px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.begin-btn button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+</style>
